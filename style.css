@@ -1,155 +1,200 @@
-.topnavbar{ 
-    background-color: teal;
-    border: black, solid, 1px;  
-    position: relative; 
-    color: white; 
-    width: 1327px;
-    height: 50px;
-    word-spacing: 2px;
-    display: flex;
-    justify-content: space-around; 
-    overflow-x: auto;
+/* ── Reset & Base ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.topnavbar a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-color: black; 
-}
-.topnavbar a:hover {
-    background-color: tan;
-    color:black;
-}
-nav a{
-    color: black;
-    text-decoration: none;
-}
-.topnavbarandtitlepage{
-    border: black, solid, 2px;
-    background-color: teal;
-}
-body{ 
-    background-color:rgb(245, 245, 220);
-    color: black;
-    word-spacing: 2px; 
-    text-indent: 1px;
+
+body {
+    background-color: #f5f5dc;
+    color: #1a1a1a;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
 }
-.subhead{
-    text-align: center;
-    width: 1350px;
-    word-spacing: 2px; 
-    text-indent: 5px;
-}
-.titlepagegrab{
-    height: -200px;
-}
-.titlepage{
-    border: black, solid, 1px;  
-}
-h1{ 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center; 
-    background-color: teal; 
-    height: 70px; 
-    padding-top: 300px; 
-    color: white; 
-}
-h2{ 
-    text-align: center;
-    border: black, solid, 3px
-}
-.abstract{
-    height:275px ;
-}
-.alltext{
-    position: center; 
-    display:center;
-    justify-content: center;
-}
-h3{
-    text-align: center;
+
+/* ── Nav ── */
+.topnavbar {
     background-color: teal;
-    height: 150px;
-    color: white; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-.h4{ 
-    text-align:center; 
-    background-color: rgb(245, 245, 220);
-    height: 20px; 
-    color: black; 
+
+.topnavbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 16px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: background-color 0.2s, color 0.2s;
 }
-.issuetitle{ 
-    border: black, solid, 2px;
-    width: 1330px; 
-    position: relative, center; 
+
+.topnavbar a:hover {
+    background-color: #b8860b;
+    color: white;
+}
+
+/* ── Hero ── */
+.topnavbarandtitlepage {
+    background-color: teal;
+}
+
+.titlepage {
+    padding: 80px 20px 60px;
     text-align: center;
 }
-.p2{ 
-    border-color: black, solid, 2px;
-    text-align: center; 
-    display: flex; 
-    justify-content: center;
-    width: 675px; 
-    text-indent: 5px;
-    word-spacing: 2px;
-    letter-spacing: .5px;
-    line-height:40px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    overflow: hidden;
 
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: white;
+    margin-bottom: 16px;
+    line-height: 1.2;
 }
-.p2summary{
-    position: absolute;  
-    text-align: left; 
-    left: 720px;
-    bottom: -280px;
-    overflow-x: hidden;
-    line-height: 45px;
-}
-.p2summary2{
-    position: absolute; 
-    text-align: left; 
-    left: 720px; 
-    bottom: -1060px;
-    line-height: 45px;
-}
-.p2summary1{
-    line-height: 45px; 
-    position: relative;
 
+h3 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
 }
-.resultchart{
-    position: absolute;
-    width: 630px;
-    left: 700px; 
-    bottom: 30px;
-    border: black, solid, 2px; 
-}
-.p2summary3{
-    position: absolute; 
-    text-align: left; 
-    left: 720px; 
-    bottom: -1350px;
-    line-height: 45px;
-}
-.button{
-    border: black, solid, 2px;
-    background-color: teal;  
-    position: relative; 
-    color: white; 
-    width: 1327px;
-   text-decoration: none;
-    height: 35px;
-    word-spacing: 2px;
+
+/* ── Content sections ── */
+.alltext {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
     display: flex;
-    justify-content: space-around; 
-    overflow-x: auto;
-    font-size: 30px;
+    flex-direction: column;
+    gap: 36px;
+}
 
+.section-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
 
+.issuetitle {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.section-body {
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+p {
+    text-align: justify;
+    font-size: 1rem;
+    color: #222;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 0.97rem;
+    color: #333;
+}
+
+/* ── Factors section ── */
+.factors-body {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.factors-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.factors-chart {
+    flex-shrink: 0;
+}
+
+.resultchart {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    display: block;
+}
+
+/* ── Donate section ── */
+.investigation {
+    background-color: teal;
+    text-align: center;
+    padding: 48px 24px 60px;
+    margin-top: 0;
+}
+
+.donate-title {
+    background-color: transparent;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.donate-sub {
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 28px;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: white;
+    color: teal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+    background-color: #b8860b;
+    color: white;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+    .factors-body {
+        flex-direction: column;
+    }
+
+    .resultchart {
+        width: 100%;
+    }
+
+    .section-body {
+        padding: 20px 18px;
+    }
 }
